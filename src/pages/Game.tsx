@@ -145,7 +145,7 @@ export default function Game() {
   const [questionSection, setQuestionSection] = useState<number>(1);
 
   useEffect(() => {
-    const socket = io("http://localhost:5427");
+    const socket = io("https://football-quiz-socket.onrender.com");
     setSocketIO(socket);
 
     socket.on("findingMatch", (response) => {
